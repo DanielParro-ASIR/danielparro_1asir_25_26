@@ -1,0 +1,33 @@
+	aside{
+	float: left;
+	width: 15%;
+	margin-left: 50px;
+	}
+
+	.header1{
+	width: 55%;	
+	margin-left: 1%;
+	display: inline-block;
+	}
+
+	#section1{
+	float:left;	
+	width: 28%;	
+	}
+
+	#section2{
+	float:left;	
+	width: 28%;	
+	margin-left: 2%;
+	}
+
+	#section3{
+	float:left;	
+	width: 28%;	
+	margin-left: 2%;
+	}
+	#titulo{
+	font-size: 40px;
+	margin-left: 220px;
+	padding: 20px;
+	}

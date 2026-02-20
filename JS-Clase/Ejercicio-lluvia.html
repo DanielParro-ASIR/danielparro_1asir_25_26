@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lluvia = ["Madrid",100,200,300,400,500,600,700];
+        let diasemana = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+        function calcularmedia(lluvia){
+            let resultado = 0
+            for(let i = 1; i < lluvia.length; i++){
+                resultado = resultado + lluvia[i];
+            };
+            let media = resultado / (lluvia.length -1);
+            return media;
+        };
+
+        function maxlluvia(lluvia){
+            let mayor = 0
+            for(let i = 1; i < lluvia.length; i++){
+                if(lluvia[i] > mayor){
+                    mayor = i;
+                };
+            };
+            return diasemana[mayor -1];
+        };
+
+document.write(`En  ${lluvia[0]} ha llovido ${calcularmedia(lluvia)} L <br>`)
+document.write(`lo que más ha llovido es el ${maxlluvia(lluvia)} `)
+
+
+
+    </script>
+
+</body>
+</html>

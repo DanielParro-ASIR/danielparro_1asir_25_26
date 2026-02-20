@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sections {
+    width: 700px;
+    background-color: rgb(254, 255, 179);
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+};
+table {
+    border-collapse: collapse; 
+    margin: 0 auto;
+}
+
+#septiembre {
+    display: table;
+    margin: 0 auto; 
+    font-weight: bold;
+    font-style: italic;
+    border-top: 1px solid black; 
+    padding-top: 2px;      
+    line-height: 1.2;
+}
+
+.table-sept th, .table-sept td {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+
+#octubre {
+    text-align: right;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.table-oct th, .table-oct td {
+    border-left: 1px solid black;
+    text-align: center;
+}
+
+.table-oct th:last-child, .table-oct td:last-child {
+    border-right: 1px solid black;
+}
+
+#noviembre {
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+.table-nov {
+    border: 1px solid black;
+}
+
+.table-nov th {
+    border: 1px solid black;
+}
+
+.table-nov td {
+    border: 1px solid black;
+    width: 14%;
+    height: 50px;
+    vertical-align: top;
+    text-align: left;
+    padding: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Efemérides</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<script>
+    let nota1 = Number(prompt("Dame la primera nota"));
+    let nota2 = Number(prompt("Dame la segunda nota"));
+    let nota3 = Number(prompt("Dame la tercera nota"));
+
+    function calcularmedia(nota1,nota2,nota3){
+        let resultado = (nota1 + nota2 + nota3)/3;
+        return resultado;
+    };
+    function aprobadosuspenso(nota){
+        if(nota >= 5){
+            return "Aprobado"
+        }else{
+            return "Suspenso"
+        }
+    }
+
+document.write(aprobadosuspenso(calcularmedia(nota1,nota2,nota3)))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2-8Abril</title>
+</head>
+<body>
+    <script>
+    /*Dado dos numeros, sumar los valores que tienen entre los numeros*/
+    
+        let numero1 = parseInt(prompt('Dame el primer numero: '));
+        let numero2 = parseInt(prompt('Dame el segundo numero: '));   
+        Visualizar(numero1, numero2);
+
+        function Visualizar(numero1, numero2){
+            let contador = 0
+            let acumulador = 0
+
+            if(numero1 > numero2){
+                document.write('Error')
+            }else{
+                for (let i=numero1 +1; i <=numero2-1; i++){
+                    document.write(i+' ');
+                    if (i < 0){
+                        contador++
+                    }
+                    acumulador += i
+                }
+                document.write('<br>' + 'La suma de estos numeros es  = ' + acumulador);
+                document.write('<br>' + 'Valores negativos = ' + contador);
+                document.write('<br>');                
+        };
+        }
+    </script>
+</body>
+</html>

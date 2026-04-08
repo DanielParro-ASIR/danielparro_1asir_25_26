@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3-8Abril</title>
+</head>
+<body>
+    <script>
+    /*Declarar un array con las notas de un alumno, 
+        - Cuantas notas aprobadas tiene
+        - Que diga la media de las notas aprobadas
+    */
+    
+        let notas = [4,1,5,6,7,8];
+        document.write('Las notas del alumnos son: ' + notas + '<br>');
+        Visualizar(notas);
+  
+        function Visualizar(notas){
+            let contador = 0
+            let acumulador = 0
+                for (let i=0; i <= notas.length; i++){
+                    if(notas[i]>=5){
+                        acumulador+=notas[i]
+                        contador++;
+                    };
+                };
+                let media = acumulador/contador;
+                document.write('El alumno tiene: ' + contador + ' notas aprobadas')
+                document.write('<br>'+ 'La media de las notas aprobadas es: ' +media)
+        };
+    </script>
+</body>
+</html>

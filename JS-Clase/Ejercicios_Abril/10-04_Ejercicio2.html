@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-04_Ejercicio2</title>
+</head>
+<body>
+    <script>
+    /*Visualizar numeros del 10 en adelante, hasta que se encuentre con un multiplo de 7 */
+    
+        visualizar();
+
+        function visualizar(){
+            sw = 0;
+            contador = 10;
+            while (sw == 0){
+                if (contador % 7 == 0){
+                    sw = 1;
+                }else{
+                    document.write(contador + " ")
+                    contador++
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

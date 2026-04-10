@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-04_Ejercicio1</title>
+</head>
+<body>
+    <script>
+    /*Se declara un array con numeros enteros, obtener si se encuentra el valor -99*/
+        let valores = [10,20,30,1293,1];
+        
+
+        visualizar(recorrer(valores));
+
+        function recorrer(valores){
+            let chivato = 0;
+            for (let i  = 0; i <= valores.length; i++){
+                if (valores.length[i] == -99){
+                    chivato = 1;
+                };
+            };
+            return chivato;
+        }
+
+        function visualizar(chivato){
+            if (chivato >= 1){
+                document.write('El valor -99 existe')
+            }else{
+                document.write('El valor -99 no existe')
+            }
+        }
+    </script>
+</body>
+</html>

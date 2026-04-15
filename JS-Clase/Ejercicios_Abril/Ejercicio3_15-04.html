@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-04_Ejercicio3</title>
+</head>
+<body>
+    <script>
+    /*Visualizar numeros enteros del 1 en adelante hasta que el numero introducido sea superor a 100 y multiplo de 7*/
+       
+        visualizar(numeros());
+        
+        function numeros(){
+            let numero = 0
+            let sw = 0;          
+
+            while(sw == 0){
+                if(numero > 100 && numero%7 == 0){
+                    sw = 1;
+                }
+                document.write(numero + " ")
+                numero++;
+            }
+        }
+
+        function visualizar(numeros){
+            numeros()
+        }
+
+    </script>
+</body>
+</html>

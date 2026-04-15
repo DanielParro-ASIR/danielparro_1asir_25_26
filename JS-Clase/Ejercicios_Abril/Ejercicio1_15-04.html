@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-04_Ejercicio1</title>
+</head>
+<body>
+    <script>
+    /*Pedir notas repetidamente de un alumno hasta que le valor dictado sea -99, visualizar la nota media de las notas introducidas*/
+       
+        Visualizar(NotasMedia());
+        
+        function NotasMedia(){
+            let nota = 0
+            let sw = 0;            
+            let acumulador = 0;
+            let contador = 0;
+
+                while(sw == 0){
+                let nota = parseInt(prompt('Dame nota: '))
+                if(nota == -99){
+                    sw = 1;
+                }else{
+                acumulador += nota
+                contador++
+                }
+            }
+            let media = acumulador / contador; 
+            return media;
+        }
+        
+        function Visualizar(media){
+            document.write('La media es ' + media)
+        }
+
+    </script>
+</body>
+</html>

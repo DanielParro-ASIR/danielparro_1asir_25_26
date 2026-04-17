@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1_17-04</title>
+</head>
+<body>
+    <script>
+        /*Pedir datos repetidamente al usuario numericos hasta que se de el -99, se pide el mayor de los valores introducidos*/
+
+        /*PROGRAMA PRINCIPAL*/
+        mostrarMayor(pedirNumero());
+  
+        /*FUNCIONES*/
+        function pedirNumero(){
+            let aux = -99999999;
+            let sw = 0;
+            let numero = 0
+            while(sw == 0){
+                numero = parseInt(prompt("Introduce un numero, para salir introduce -99"))
+                if(numero != -99){
+                    if(numero > aux){
+                        aux = numero;
+                    }
+                }else{
+                    sw = 1;
+                }
+            }
+            return aux;
+        }
+        function mostrarMayor(mayor){
+            document.write("El mayor numero introducido es: " + mayor);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2_17-04</title>
+</head>
+<body>
+    <script>
+        /*Pedir datos repetidamente al usuario siempre que el valor tecleado sea mayor que el anterior tecleado cuando se rompa la secuencia,visualizar cuantos numeros
+        han sido tecleados y cuales */
+
+        /*PROGRAMA PRINCIPAL*/
+        let misNumeros = pedirNumero(); 
+        document.write('Los numeros introducidos son: ' + misNumeros + ' <br>Son ' + misNumeros.length + ' numeros en total validos.'); 
+  
+        /*FUNCIONES*/
+        function pedirNumero() {
+            let sw = 0;
+            let numeros = []; 
+            let numero = 0;
+            let i = 0;
+            
+            while(sw == 0) {
+                numero = parseInt(prompt("Introduce un numero, para salir introduce numero menor al anterior"));
+                
+                if(i == 0) {
+                    numeros.push(numero);
+                } else if(numero > numeros[i-1]) {
+                    numeros.push(numero);
+                } else {
+                    sw = 1;
+                }
+                i++;
+            }      
+            return numeros; 
+        }
+    </script>
+</body>
+</html>

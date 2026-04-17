@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-04_Para_Casa</title>
+</head>
+<body>
+    <script>
+    /*Declarar dos array con valores numericos, visualizar si o no los 2 array son exactamente iguales usando switch.*/
+
+        /*PROGRANA PRINCIPAL*/
+        let numeros1 = [1,2,3,4,5];
+        let numeros2 = [1,2,3,4,5,6];    
+        visualizar();
+
+        /*FUNCIONES*/
+        function iguales(numeros1, numeros2){
+        let sw = 0;
+        let i = 0;
+        document.write(numeros1 + '<br>');
+        document.write(numeros2 + '<br>');
+            while(sw == 0){
+                if(numeros1.length != numeros2.length){
+                    sw = 1;
+                    document.write('No son iguales');
+                }else if(numeros1[i] != numeros2[i]){
+                    sw = 1;
+                    document.write('No son iguales');
+                }
+                if(i > numeros1.length){
+                    sw = 1;
+                    document.write('Son iguales')
+                }
+                i++
+            }
+        }
+
+        function visualizar(){
+            iguales(numeros1,numeros2);
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1_17-04</title>
+</head>
+<body>
+    <script>
+        /*Pedir numeros repetidamente hasta acertar una clave numerica, por cada numero introducido no acertado se le dara al usuario un mensaje como pista 
+        para decirle si el numero introducido es mayor o menor, una vez acertado visualizar las ocasiones que ha necesitado*/
+
+        /*PROGRAMA PRINCIPAL*/
+        let clave=100;
+        visualizar();
+
+        
+        /*FUNCIONES*/
+        function claveNumerica(clave){
+            let sw = 0; let numero = 0; let contador = 0;
+            while(sw == 0){
+                numero = parseInt(prompt('Introduce clave secreta: '))
+                if(numero == clave){
+                    sw = 1
+                }else if(numero<clave){
+                    alert('La clave es mayor')
+                }else{
+                    alert('La clave es menor')
+                }
+                contador++
+            }
+            return contador;
+        }
+        function visualizar(){
+            document.write('¡Correcto! la clave numerica es: ' + clave + ', has necesitado estos intentos -> ' + claveNumerica(clave))
+        }
+    </script>
+</body>
+</html>

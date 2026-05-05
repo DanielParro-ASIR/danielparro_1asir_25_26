@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1-29Abril</title>
+</head>
+<body>
+    <script>
+    let matriz_sueldos = [[1300, 800, 2300, 1900], [1000, 2000, 1500, 4000], [1400, 900, 3200, 5000]];
+
+    function mayorSueldo(matriz_sueldos) {
+        let mayor = 0;
+        let array = 0;
+        let numeroarray = 0;
+        
+        for (let i = 0; i < matriz_sueldos.length; i++) {
+            
+            for (let j = 0; j < matriz_sueldos[i].length; j++) {
+                
+                if (matriz_sueldos[i][j] > mayor) {
+                    mayor = matriz_sueldos[i][j];
+                    array = matriz_sueldos[i];
+                    numeroarray = i;
+                }
+            }
+        }
+        document.write("El mayor sueldo de la matriz es: " + mayor);
+        document.write("<br>El valor se encuentra en el array: " + "[" + array + "]");
+        document.write("<br>Es el : " + (numeroarray+1) + "ºarray");
+    }
+
+    mayorSueldo(matriz_sueldos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4-29Abril</title>
+</head>
+<body>
+    <script>
+    let matriz_sueldos = [["Pepe", 8000, 2300, 9900], ["Ana", 2000, 1500, 4000], ["Juan", 900, 3200, 5000]];
+
+    function totalSueldos(matriz_sueldos) {
+        let mayormedia = 0
+        let nombre = ""
+        for (let i = 0; i < matriz_sueldos.length; i++) {
+            let suma = 0
+            let media = 0
+            for (let j = 1; j < matriz_sueldos[i].length; j++) {
+                suma += matriz_sueldos[i][j]
+            }
+            media = suma / matriz_sueldos.length - 1
+            if(media > mayormedia){
+                mayormedia += media
+                nombre = matriz_sueldos[i][0] 
+            }
+        }
+        return [mayormedia,nombre];
+    }
+    function visualizar(){
+        document.write("La persona con mayor media es: " + totalSueldos(matriz_sueldos)[1] + " su media de sueldo = " + totalSueldos(matriz_sueldos)[0])
+    }
+    visualizar()
+    </script>
+</body>
+</html>

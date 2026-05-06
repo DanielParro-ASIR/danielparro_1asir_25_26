@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Medias-2</title>
+</head>
+<body>  
+    <script>
+        let mat_notas = [["daniel", 5, 6, 2], ["marcos", 6, 8, 9]];
+
+        function calcularMedia(notas) {
+            let resultado = []
+            for(let i = 0; i < notas.length; i++) {
+                let nombre = notas[i][0]; 
+                let suma = 0;
+                let cantidadNotas = notas[i].length - 1; 
+
+                for(let j = 1; j < notas[i].length; j++) {
+                    suma += notas[i][j];
+                }
+                
+                let media = suma / cantidadNotas;
+                resultado.push([nombre, media])
+            }
+            return resultado            
+        }
+        function visualizar(lista) {
+                    for(let i = 0; i < lista.length; i++) {
+                        let alumno = lista[i];
+                        document.write("La media de " + alumno[0] + " es: " + alumno[1] + "<br>");           
+                    }
+                }
+        
+        
+        visualizar(calcularMedia(mat_notas))
+    </script>
+</body>
+</html>

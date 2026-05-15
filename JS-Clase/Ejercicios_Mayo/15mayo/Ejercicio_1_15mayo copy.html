@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Declarar un array de varios elementos en el que cada uno de ellos es a su vez otro array con varios elementos,
+    Se pide: Por cada subarray visualizar el primero y el ultimo*/
+
+        let mat = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]];
+
+        function primeroUltimo(mat) {
+
+            for (let i = 0; i < mat.length; i++) {
+                document.write("Array: " + i + "<br>primer valor: " + mat[i][0] + "<br> ultimo valor: " + mat[i][mat[i].length - 1] + "<br>")
+            }
+        }
+        primeroUltimo(mat);
+    </script>
+</body>
+</html>

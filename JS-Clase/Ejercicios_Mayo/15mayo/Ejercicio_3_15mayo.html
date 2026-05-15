@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    /*Dado un nombre de alumno y nota almacenarlo en un objeto y visualizarlo y decir si esta aprobado o suspenso*/
+        let nombre = "Daniel" 
+        let nota = 8
+        let alumnos = {
+            nombreAlumno: nombre,
+            notaAlumno: nota
+        }
+        function evaluarObjeto(alumnos){
+            let estado = ""
+            if(alumnos.notaAlumno < 5){
+                estado = "suspenso"
+            }else{
+                estado = "Aprobado"
+            }
+            document.write("Alumno: " + alumnos.nombreAlumno +"<br>Nota: " + alumnos.notaAlumno +"<br>Estado: " + estado)
+        }
+        evaluarObjeto(alumnos);
+    </script>
+</body>
+</html>

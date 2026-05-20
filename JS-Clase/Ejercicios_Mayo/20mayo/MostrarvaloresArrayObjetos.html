@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+</head>
+<body>
+    <h1>Lista de objetos</h1>
+
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="resultado"></div>
+
+   <script>
+    let jsonEmpleados = `[
+    {"nombre":"Luis","salario":2000,"departamento": "Ventas"},
+    {"nombre":"Carlos","salario":3400,"departamento": "Ventas"},
+    {"nombre":"Miguel","salario":4000,"departamento": "Ventas"},
+    {"nombre":"Sofia","salario":2200,"departamento": "Ventas"}
+    ]`;
+    
+    
+    const empleados = JSON.parse(jsonEmpleados);
+
+    function mostrarValores(){
+        let resultado = ""
+        for(const key in empleados){
+            resultado += empleados[key].nombre +" " + empleados[key].salario+" " + empleados[key].departamento +"<br>" 
+        }
+        document.getElementById("resultado").innerHTML = resultado
+    }
+
+
+   </script> 
+</body>
+</html>

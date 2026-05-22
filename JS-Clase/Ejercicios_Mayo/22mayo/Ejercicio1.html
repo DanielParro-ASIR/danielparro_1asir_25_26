@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="valores">
+    <button onclick="parImpar()">Par_impar</button>
+    <button onclick="pares()">Pares</button>
+    <button onclick="impares()">Impares</button>
+
+    <div id="resultado"></div>
+    <div id="pares"></div>
+    <div id="impares"></div>
+    <script>
+        //se pide por teclado un numero, un boton que diga calcular visualice si es par o impar y se añade otros 2 botones (pares, impares);
+        //par:visualizar los valores pares teclados anteriormente
+        //impar:visualizar los valores impares teclados anteriormente
+
+        let arrayPares = []
+        let arrayImpares = []
+
+        function parImpar(){
+            let valor = parseInt(document.getElementById("valores").value)
+            let resultado = ""
+            if (valor % 2 == 0){
+                resultado += "valor_par"
+                arrayPares.push(valor)
+            } else{
+                resultado += "valor_impar"
+                arrayImpares.push(valor)
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+            document.getElementById("valores").value = ""
+        }
+
+        function pares(){
+            let resultado = ""
+            for(i=0; i < arrayPares.length; i++){
+                resultado += arrayPares[i] + " ";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+
+        function impares(){
+            let resultado = ""
+            for(i=0; i < arrayImpares.length; i++){
+                resultado += arrayImpares[i] + " ";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+
+
+    </script>
+</body>
+</html>

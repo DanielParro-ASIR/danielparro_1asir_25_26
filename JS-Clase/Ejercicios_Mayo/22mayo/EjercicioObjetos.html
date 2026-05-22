@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //declarar objeto json con los nombres y pagos a distintos empleados. 1 empleado puede tener varios pagos
+        //a) Por cada empleado la media de sus pagos.
+        //b) visualizar el nombre del empleado que obtenga mayor media
+        //c) Obtener una superlista solo con los pagos
+
+        let jsonPagos = `[
+        {"nombre":"Daniel", "pagos":[3000,2500,1000,12]},
+        {"nombre":"Antonio", "pagos":[700,500,100]},
+        {"nombre":"Pedri", "pagos":[2000,1500,5000]}
+        ]`
+
+        const jsPagos = JSON.parse(jsonPagos);
+        console.log(jsonPagos)
+
+        function mediaPagos(){
+            let mayorMedia = 0
+            let nombreMayorMedia = ""
+            let superLista = []
+
+            for(let key in jsPagos){
+                let media = 0
+                let suma = 0
+                for(let key1 in jsPagos[key].pagos){
+                    console.log(key1)
+                    suma += jsPagos[key].pagos[key1]
+            }
+                media = suma / jsPagos[key].pagos.length
+                if(media > mayorMedia){
+                    mayorMedia = media
+                    nombreMayorMedia = jsPagos[key].nombre
+                }
+                superLista.push(jsPagos[key].pagos)
+                document.write(jsPagos[key].nombre + ": " + media+ "<br>")
+            }
+                document.write("El que mayor media tiene es: " + nombreMayorMedia + "<br>")
+                document.write("El superArray: " +superLista)
+        }
+        mediaPagos()
+    </script>
+</body>
+</html>

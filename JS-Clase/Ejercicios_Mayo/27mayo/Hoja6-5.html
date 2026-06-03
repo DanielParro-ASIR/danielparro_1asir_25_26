@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*5.-) Un servicio de atención al ciente tiene establecido turnos semanales para sus empleados de manera que cada día de la semana se encarga del servicio una persona:
+ lunes - María, Martes - Luis, Miércoles - Antonia, Jueves -Pedro, Viernes - Marisa.
+
+Usa un array para almacenar los datos del servicio. En este array cada elemento será un par día - nombre. Crea una función que responda con el nombre de la persona 
+encargada del servicio sabiendo el día. Si el día no existe deberá decir que no hay servicio. 
+
+Los nombres de los días deben ir en minúsculas. Si le pido servicio('Lunes') me debería decir "Este día se encarga María" y si le pido servico(Miércoles") me daría Antonia. */
+    
+    let array = [
+        {dia:"lunes",nombre:"María"},
+        {dia:"martes",nombre:"Luis"},
+        {dia:"miercoles",nombre:"Antonia"},
+        {dia:"jueves",nombre:"Pedro"},
+        {dia:"viernes",nombre:"Marisa"}
+    ];
+
+        function servicio(dia){
+            let contador = 0 
+                for (i = 0; i < array.length; i++){
+                    if(array[i].dia == dia){
+                        document.write("Este dia se encarga " + array[i].nombre)
+                        contador = 1
+                    }
+                }
+            if(contador == 0){
+            document.write("No hay servicio")
+            }
+        }
+        servicio("jueves")    
+    </script>
+</body>
+</html>

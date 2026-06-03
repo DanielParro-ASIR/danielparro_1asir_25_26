@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen5</title>
+</head>
+<body>
+    <script>
+        let datosJSON = `{
+            "nombre":"Laura",
+            "notas":[7,9,5,8,6]
+        }`
+
+        let datosJS = JSON.parse(datosJSON)
+
+        function ejercicio5(){
+            let notamayor = 0
+            let notamenor = 9999999999
+            let suma = 0
+            for(i = 0; i< datosJS.notas.length; i++){
+                if (datosJS.notas[i] > notamayor){
+                    notamayor = datosJS.notas[i]
+                }
+                if (datosJS.notas[i] < notamenor){
+                    notamenor = datosJS.notas[i]
+                }
+                suma += datosJS.notas[i]
+            }
+            let media = suma / datosJS.notas.length
+            let resultado ={
+                mayornota:notamayor,
+                menornota:notamenor,
+                notamedia:media,
+                motrarInforme:function(){
+                    document.write("Mayor nota= " + this.mayornota+"<br> Menor nota= " + this.menornota+"<br>Media= " + this.notamedia)    
+                }
+            }
+            resultado.motrarInforme()
+        }
+
+        ejercicio5()
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen2</title>
+</head>
+<body>
+    <script>
+        let mat = [
+        [20,4,8,7],
+        [8,4,9,8],
+        [10,7,8,7]
+        ]
+
+        function visualizar(){
+            let posicion = ["primera","segunda","tercera"]
+            let resultado= 0
+            let menorDiferencia = 9999999
+            for(i=0; i < mat.length; i++){
+                let diferencia = 0
+                let mayor = 0
+                let menor = 99999999
+                for(j=0; j<mat[i].length; j++){
+                    if(mat[i][j] > mayor){
+                        mayor = mat[i][j]
+                    }else if(mat[i][j] < menor){
+                        menor = mat[i][j]
+                    }
+                }
+                diferencia = mayor - menor
+                if(diferencia < menorDiferencia){
+                    menorDiferencia = diferencia
+                    resultado = i
+                }
+            }
+            document.write("El array con menor diferencia es la " + posicion[resultado])
+        }
+        visualizar()
+    </script>
+</body>
+</html>

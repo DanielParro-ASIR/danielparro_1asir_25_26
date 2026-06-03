@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen1</title>
+</head>
+<body>
+    <script>
+        let mat = [
+        ["lunes",{poblado:"Chiclana",contagios:130},{poblado:"Conil",contagios:100},{poblado:"SanFernando",contagios:170}],
+        ["martes",{poblado:"Chiclana",contagios:110},{poblado:"Conil",contagios:120},{poblado:"SanFernando",contagios:200}],
+        ["miercoles",{poblado:"Chiclana",contagios:50},{poblado:"Conil",contagios:230},{poblado:"SanFernando",contagios:90}],
+        ["jueves",{poblado:"Chiclana",contagios:190},{poblado:"Conil",contagios:60},{poblado:"SanFernando",contagios:120}],
+        ["viernes",{poblado:"Chiclana",contagios:180},{poblado:"Conil",contagios:130},{poblado:"SanFernando",contagios:70}],
+        ]
+        
+        function apartadoA(){
+            for(i = 1; i<mat[1].length; i++){
+                document.write(mat[1][i].poblado + ", Contagiados: " + mat[1][i].contagios + "<br>")
+            }
+        }
+
+        function apartadoB(){
+            let suma = 0
+            for(i = 0; i<mat.length; i++){
+                suma += mat[i][1].contagios
+            }
+            document.write(" <br> Chiclana ha tenido un total de contagios de: " + suma)
+        }
+
+        apartadoA()
+        apartadoB()
+    </script>
+</body>
+</html>

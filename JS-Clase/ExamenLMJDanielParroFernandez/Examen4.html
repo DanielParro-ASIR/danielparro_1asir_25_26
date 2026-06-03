@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen4</title>
+</head>
+<body>
+    <script>
+        let mat1 = [
+            [4,7,9,45],
+            [7,5,4,3],
+            [66,33,21,3],
+            [5,70,150,477],
+            [5,4,3,2]
+        ]
+
+        function ordenadas(){
+            let posicion = ["primera","segunda","tercera","cuarta","quinta"]
+            let posiciones = []
+
+            for(i = 0; i<mat1.length; i++){
+                let menor = mat1[i][0]
+                let ordenada = true
+                for(j = 1; j<mat1[i].length; j++){
+                    if(mat1[i][j] > menor){
+                        menor = mat1[i][j]
+                    }else{
+                        ordenada = false
+                        break
+                    }
+                }
+                if(ordenada == true){
+                    posiciones.push(posicion[i])
+                }
+            }
+            document.write("Las filas ordenadas ascendentemente son : " + posiciones + "<br>")
+        }
+
+        function binario(){
+            let mat2 = []
+            for (i = 0; i<mat1.length; i++){
+                let fila = []
+                for(j = 0; j<mat1[i].length; j++){
+                    if(mat1[i][j] % 2 == 0){
+                        fila.push(0)
+                    }else{
+                        fila.push(1)
+                    }
+                }
+                mat2.push(fila)
+            }
+            for(i = 0; i<mat2.length; i++){
+                document.write(mat2[i] + "<br>")
+            }
+        }
+
+        ordenadas()
+        binario()
+    </script>
+</body>
+</html>

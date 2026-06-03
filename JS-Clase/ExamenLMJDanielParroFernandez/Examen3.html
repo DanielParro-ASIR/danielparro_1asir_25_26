@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen3</title>
+</head>
+<body>
+    <input type="text" id="numero1">
+    <input type="text" id="numero2">
+    <button onclick="guardar()">guardar</button>
+    <button onclick="buscar()">buscar</button>
+    <div id="visualizar"></div>
+
+    <script>
+        let array = []
+        function guardar(){
+            array.push(document.getElementById("numero1").value)
+            document.getElementById("numero1").value = ""
+        }
+
+        function buscar(){
+            let contador = 0
+            let encontrado = 0
+            for(i = 0; i<array.length; i++){
+                if(document.getElementById("numero2").value == array[i]){
+                    contador++
+                    encontrado = 1
+                }
+                if(encontrado == 1){
+                    document.getElementById("visualizar").innerHTML = "Se ha tecleado anteriormente, numero de veces encontrado = " + contador
+                }else{
+                    document.getElementById("visualizar").innerHTML = "Ese valor no se ha encontrado"
+                }
+            }
+        document.getElementById("numero2").value = ""
+        }
+
+    </script>
+</body>
+</html>
